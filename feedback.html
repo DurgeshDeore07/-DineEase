@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DineEase Feedback</title>
+
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+    <div class="feedback-container">
+
+        <h1>🍽️ DineEase</h1>
+
+        <div class="feedback-box">
+
+            <h2>⭐ Give Your Feedback</h2>
+
+            <p>Order No: <b><span id="order-id"></span></b></p>
+
+            <label for="rating">Rating:</label>
+
+            <select id="rating">
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Needs Improvement</option>
+                <option value="1">⭐ Poor</option>
+            </select>
+
+            <label for="feedback">Your Feedback:</label>
+
+            <textarea id="feedback" placeholder="Write your feedback here..." rows="5">
+            </textarea>
+
+            <button onclick="submitFeedback()">
+                Submit Feedback
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="feedback.js"></script>
+
+</body>
+
+</html>
