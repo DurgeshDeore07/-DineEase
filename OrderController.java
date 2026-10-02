@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dineease.backend.entity.order;
+import com.dineease.backend.entity.Order;
 import com.dineease.backend.repository.OrderRepository;
 
 @RestController
