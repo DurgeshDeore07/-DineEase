@@ -19,7 +19,7 @@ public class Order {
     private double total;
     private String status;
 
-    public order() {
+    public Order() {
     }
 
     public int getId() {
