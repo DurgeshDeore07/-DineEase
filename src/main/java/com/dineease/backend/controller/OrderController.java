@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dineease.backend.entity.order;
+import com.dineease.backend.entity.Order;
 import com.dineease.backend.repository.OrderRepository;
 
 @RestController
@@ -41,7 +41,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public order placeOrder(@RequestBody order order) {
+    public Order placeOrder(@RequestBody Order order) {
         order.setStatus("Pending");
         return orderRepository.save(order);
     }
@@ -52,9 +52,9 @@ public class OrderController {
     }
 
     @PutMapping("/{id}/confirm")
-    public order confirmOrder(@PathVariable int id) {
+    public Order confirmOrder(@PathVariable int id) {
 
-        order order = orderRepository.findById(id).orElse(null);
+        Order order = orderRepository.findById(id).orElse(null);
 
         if (order != null) {
             order.setStatus("Confirmed");
@@ -65,7 +65,7 @@ public class OrderController {
     }
 
     @PutMapping("/{id}/preparing")
-    public order prepareOrder(@PathVariable int id) {
+    public Order prepareOrder(@PathVariable int id) {
 
         order order = orderRepository.findById(id).orElse(null);
 
